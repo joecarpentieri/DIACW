@@ -20,8 +20,8 @@ class Brain():
 
     # modify this to change the robot's behaviour
     def thinkAndAct(self, chargerL, chargerR, x, y, sl, sr,\
-                    battery):
-        
+                    count):
+        completed = False
         newX = None
         newY = None
 
@@ -59,6 +59,10 @@ class Brain():
             speedLeft = 2.0
             speedRight = 2.0
 
+        if self.time==1000:
+            print("complete: total dirt collected "+str(count))
+            completed = True
+
         #toroidal geometry
         if x>1000:
             newX = 0
@@ -69,13 +73,13 @@ class Brain():
         if y<0:
             newY = 1000
 
-        
+        self.time += 1
 
-        return speedLeft, speedRight, newX, newY
+        return speedLeft, speedRight, newX, newY, count, completed
 
 class Bot():
 
-    def __init__(self,namep,canvasp):
+    def __init__(self,namep,canvasp, counterp):
         self.name = namep
         self.canvas = canvasp
         self.x = random.randint(100,900)
@@ -86,6 +90,7 @@ class Bot():
         self.sl = 0.0
         self.sr = 0.0
         self.battery = 1000
+        self.counter = counterp
 
     def getLocation(self):
         return self.x, self.y
@@ -94,13 +99,17 @@ class Bot():
         chargerL, chargerR = self.senseBots(agents)
 
         #view = self.look(agents)
-        self.sl, self.sr, xx, yy = self.brain.thinkAndAct\
+        self.sl, self.sr, xx, yy, count, completed = self.brain.thinkAndAct\
             (chargerL, chargerR, self.x, self.y, \
-             self.sl, self.sr, self.battery)
+             self.sl, self.sr, self.counter.dirtCollected)
         if xx != None:
             self.x = xx
         if yy != None:
             self.y = yy
+        if completed:
+            return count
+        else:
+            return None
         
     def setBrain(self,brainp):
         self.brain = brainp
@@ -261,6 +270,9 @@ class Counter:
         canvas.create_text(50,50,anchor="w",\
                            text="Dirt collected: "+str(self.dirtCollected),\
                            tags="dirtCount")
+        
+    def getDirtCollected(self):
+        return self.dirtCollected
 
 
 def initialise(window):
@@ -278,9 +290,11 @@ def buttonClicked(x,y,agents):
 def createObjects(canvas,noOfBots=2,noOfLights=2,amountOfDirt=300,noOfCats=5):
     agents = []
     passiveObjects = []
+
+    count = Counter()
     
     for i in range(0,noOfBots):
-        bot = Bot("Bot"+str(i),canvas)
+        bot = Bot("Bot"+str(i),canvas,count)
         brain = Brain(bot)
         bot.setBrain(brain)
         agents.append(bot)
@@ -302,30 +316,47 @@ def createObjects(canvas,noOfBots=2,noOfLights=2,amountOfDirt=300,noOfCats=5):
         dirt = Dirt("Dirt"+str(i))
         passiveObjects.append(dirt)
         dirt.draw(canvas)
-
-    count = Counter()
     
     canvas.bind( "<Button-1>", lambda event: buttonClicked(event.x,event.y,agents) )
     
     return agents, passiveObjects, count
 
-def moveIt(canvas,agents,passiveObjects,count,moves):
+def quit():
+    tk.destroy()
+
+def moveIt(canvas,agents,passiveObjects,count,window):
     for rr in agents:
-        rr.thinkAndAct(agents,passiveObjects,canvas)
+        returnedCount = rr.thinkAndAct(agents,passiveObjects, canvas)
+        if returnedCount != None:
+            window.destroy()
+            return returnedCount
         rr.update(canvas,passiveObjects,1.0)
         if isinstance(rr,Bot):
             passiveObjects = rr.collectDirt(canvas,passiveObjects,count)
-        # moves +=1
-        # if moves==5000:
+        
+        #if moves==100:
+            #return moves
         #     time.sleep(3)
-        #     sys.exit()
-    canvas.after(20,moveIt,canvas,agents,passiveObjects,count,moves)
+            
+    canvas.after(20,moveIt,canvas,agents,passiveObjects,count,window)
 
-def main():
+
+def main(botNo, dirtNo):
     window = tk.Tk()
     canvas = initialise(window)
-    agents, passiveObjects, count = createObjects(canvas,noOfBots=10,noOfLights=0,amountOfDirt=500,noOfCats=0)
-    moveIt(canvas,agents,passiveObjects,count,0)
+    agents, passiveObjects, count = createObjects(canvas,noOfBots=botNo,noOfLights=0,amountOfDirt=dirtNo,noOfCats=0)
+    moves = moveIt(canvas,agents,passiveObjects,count,window)
+    #if moves == 100:
+        #window.destroy()
     window.mainloop()
+    return count.getDirtCollected()
 
-main()
+#main()
+
+
+def runMain(noOfTimes, botNo, dirtNo):
+    counterList = []
+    for times in range(noOfTimes):
+        main(botNo, dirtNo)
+
+runMain(2, 1, 300)
