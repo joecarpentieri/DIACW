@@ -21,31 +21,6 @@ class Brain():
     # modify this to change the robot's behaviour
     def thinkAndAct(self, lightL, lightR, chargerL, chargerR, x, y, sl, sr,\
                     battery, collision):
-        '''dangerDetected = False
-
-        trainingTime = 1000
-        if self.time<trainingTime:
-            self.trainingSet.append((camera,collision))
-        elif self.time==trainingTime:
-            warningValues = []
-            for i,tt in enumerate(self.trainingSet):
-                if i>=5 and tt[1]==True:
-                    warningValues.append(self.trainingSet[i-5][0])
-            countWV = 0
-            sumWV = 0
-            for wv in warningValues:
-                if not wv==[0]*9:
-                    sumWV += max(wv)
-                    countWV += 1
-            self.dangerThreshold = sumWV/countWV
-            print("bot now trained")
-            print(self.dangerThreshold)
-        elif self.time>trainingTime:
-            if any(c>self.dangerThreshold for c in camera):
-                dangerDetected = True
-            
-        self.time += 1
-        '''
         
         newX = None
         newY = None
@@ -67,7 +42,12 @@ class Brain():
             self.currentlyTurning = False
 
         #battery - these are later so they have priority
-        if battery<1000:
+    
+        if chargerR>170:
+            print(chargerR)
+        if chargerL>170:
+            print(chargerL)
+            '''
             if chargerR>chargerL:
                 speedLeft = 2.0
                 speedRight = -2.0
@@ -76,14 +56,51 @@ class Brain():
                 speedLeft = -2.0
                 speedRight = 2.0
                 print("can sense bot!")
-            if abs(chargerR-chargerL)<chargerL*0.1: #approximately the same
+            '''
+            '''if abs(chargerR-chargerL)<chargerL*0.1 and not (chargerR+chargerL)>350: #approximately the same
                 speedLeft = 5.0
-                speedRight = 5.0
-                print("can sense bot!")
-            if lightR+lightL>300:
+                speedRight = 5.0'''
+            '''if abs(chargerR-chargerL)<chargerL*0.1 and (chargerR+chargerL)>350:
                 speedLeft = 5.0
                 speedRight = 0.0
-                print("can sense light!")
+                print(chargerL+chargerR)'''
+        if chargerR>175:
+            speedLeft = 0.0
+            speedRight = 5.0
+            '''if chargerL>250:
+                speedLeft = 0.0
+                speedRight = 5.0'''
+        if chargerL+chargerR>200 and battery<1000:
+            print("can sense bot!")
+        '''if chargerL+chargerR>200 and battery<1000:
+             speedLeft = 0.0
+             speedRight = 0.0
+             speedRight = 0.0'''
+
+
+
+        '''if chargerL+chargerR>500:
+            if chargerR>chargerL:
+                speedLeft = 2.0
+                speedRight = 0.0
+                print("can sense bot!")
+                print(chargerL+chargerR)
+        if chargerL+chargerR>1000:
+            speedLeft = 5.0
+            speedRight = 5.0'''
+
+        '''elif chargerR<chargerL:
+                speedLeft = -2.0
+                speedRight = 0.0
+                print("can sense bot!")'''
+        '''if abs(chargerR-chargerL)<chargerL*0.1: #approximately the same
+                speedLeft = 5.0
+                speedRight = 5.0
+                print("can sense bot!")'''
+        '''if lightR+lightL>300:
+                speedLeft = 5.0
+                speedRight = 0.0
+                print("can sense light!")'''
         '''if chargerL+chargerR>200 and battery<1000:
             speedLeft = 0.0
             speedRight = 0.0'''
@@ -569,7 +586,7 @@ def moveIt(canvas,agents,passiveObjects,count,moves):
 def main():
     window = tk.Tk()
     canvas = initialise(window)
-    agents, passiveObjects, count = createObjects(canvas,noOfBots=2,noOfLights=1,amountOfDirt=300,noOfCats=5)
+    agents, passiveObjects, count = createObjects(canvas,noOfBots=20,noOfLights=1,amountOfDirt=300,noOfCats=0)
     moveIt(canvas,agents,passiveObjects,count,0)
     window.mainloop()
 
