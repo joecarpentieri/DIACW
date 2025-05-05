@@ -70,15 +70,18 @@ class Brain():
             if chargerR>chargerL:
                 speedLeft = 2.0
                 speedRight = -2.0
+                print("can sense bot!")
             elif chargerR<chargerL:
                 speedLeft = -2.0
                 speedRight = 2.0
+                print("can sense bot!")
             if abs(chargerR-chargerL)<chargerL*0.1: #approximately the same
                 speedLeft = 5.0
                 speedRight = 5.0
-        if chargerL+chargerR>200 and battery<1000:
+                print("can sense bot!")
+        '''if chargerL+chargerR>200 and battery<1000:
             speedLeft = 0.0
-            speedRight = 0.0
+            speedRight = 0.0'''
 
         #toroidal geometry
         if x>1000:
@@ -107,11 +110,13 @@ class Bot():
         self.sl = 0.0
         self.sr = 0.0
         self.battery = 1000
- 
+
+    def getLocation(self):
+        return self.x, self.y
 
     def thinkAndAct(self, agents, passiveObjects, canvas):
         lightL, lightR = self.senseLight(passiveObjects)
-        chargerL, chargerR = self.senseChargers(passiveObjects)
+        chargerL, chargerR = self.senseChargers(agents)
         collision = self.collision(agents)
 
         view = self.look(agents)
@@ -180,11 +185,11 @@ class Bot():
         return lightL, lightR
 
     #returns sensors values that detect chargers
-    def senseChargers(self, passiveObjects):
+    def senseChargers(self, agents):
         chargerL = 0.0
         chargerR = 0.0
-        for pp in passiveObjects:
-            if isinstance(pp,Charger):
+        for pp in agents:
+            if isinstance(pp, Bot):
                 lx,ly = pp.getLocation()
                 distanceL = math.sqrt( (lx-self.sensorPositions[0])*(lx-self.sensorPositions[0]) + \
                                        (ly-self.sensorPositions[1])*(ly-self.sensorPositions[1]) )
@@ -338,7 +343,7 @@ class Cat:
         self.currentlyTurning = False
         self.ll = 20
         imgFile = Image.open("cat.png")
-        imgFile = imgFile.resize((30,30), Image.ANTIALIAS)
+        imgFile = imgFile.resize((30,30))
         self.image = ImageTk.PhotoImage(imgFile)
         
     def draw(self,canvas):
@@ -561,7 +566,7 @@ def moveIt(canvas,agents,passiveObjects,count,moves):
 def main():
     window = tk.Tk()
     canvas = initialise(window)
-    agents, passiveObjects, count = createObjects(canvas,noOfBots=1,noOfLights=0,amountOfDirt=300,noOfCats=5)
+    agents, passiveObjects, count = createObjects(canvas,noOfBots=2,noOfLights=0,amountOfDirt=300,noOfCats=5)
     moveIt(canvas,agents,passiveObjects,count,0)
     window.mainloop()
 
