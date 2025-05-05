@@ -20,8 +20,8 @@ class Brain():
 
     # modify this to change the robot's behaviour
     def thinkAndAct(self, lightL, lightR, chargerL, chargerR, x, y, sl, sr,\
-                    battery, camera, collision):
-        dangerDetected = False
+                    battery, collision):
+        '''dangerDetected = False
 
         trainingTime = 1000
         if self.time<trainingTime:
@@ -45,6 +45,7 @@ class Brain():
                 dangerDetected = True
             
         self.time += 1
+        '''
         
         newX = None
         newY = None
@@ -99,7 +100,7 @@ class Brain():
 
         
 
-        return speedLeft, speedRight, newX, newY, dangerDetected
+        return speedLeft, speedRight, newX, newY
 
 class Bot():
 
@@ -123,12 +124,10 @@ class Bot():
         chargerL, chargerR = self.senseBots(agents)
         collision = self.collision(agents)
 
-        view = self.look(agents)
-        self.sl, self.sr, xx, yy, dangerDetected = self.brain.thinkAndAct\
+        #view = self.look(agents)
+        self.sl, self.sr, xx, yy = self.brain.thinkAndAct\
             (lightL, lightR, chargerL, chargerR, self.x, self.y, \
-             self.sl, self.sr, self.battery, view, collision)
-        if (dangerDetected):
-            self.reactToDanger(agents)
+             self.sl, self.sr, self.battery, collision)
         if xx != None:
             self.x = xx
         if yy != None:
@@ -145,7 +144,7 @@ class Bot():
                 ag.jump(big=True)
 
 
-    def look(self,agents):
+    '''def look(self,agents):
         self.view = [0]*9
         for idx,pos in enumerate(self.cameraPositions):
             for cc in agents:
@@ -170,7 +169,7 @@ class Bot():
                 colour = hex(15-math.floor(self.view[vv]*16.0)) #scale to 0-15 -> hex
                 fillHex = "#"+colour[2]+colour[2]+colour[2]
                 self.canvas.create_rectangle(850+vv*15,50,850+vv*15+15,65,fill=fillHex,tags="view")
-        return self.view
+        return self.view'''
 
 
     #returns the output from polling the light sensors
@@ -222,14 +221,14 @@ class Bot():
     # draws the robot at its current position
     def draw(self,canvas):
 
-        self.cameraPositions = []
+        '''self.cameraPositions = []
         for pos in range(20,-21,-5):
             self.cameraPositions.append( ( (self.x + pos*math.sin(self.theta)) + 30*math.sin((math.pi/2.0)-self.theta), \
                                  (self.y - pos*math.cos(self.theta)) + 30*math.cos((math.pi/2.0)-self.theta) ) )
         for xy in self.cameraPositions:
             canvas.create_oval(xy[0]-2,xy[1]-2,xy[0]+2,xy[1]+2,fill="purple1",tags=self.name)
         for xy in self.cameraPositions:
-            canvas.create_line(xy[0],xy[1],xy[0]+400*math.cos(self.theta),xy[1]+400*math.sin(self.theta),fill="light grey",tags=self.name)
+            canvas.create_line(xy[0],xy[1],xy[0]+400*math.cos(self.theta),xy[1]+400*math.sin(self.theta),fill="light grey",tags=self.name)'''
             
 
         points = [ (self.x + 30*math.sin(self.theta)) - 30*math.sin((math.pi/2.0)-self.theta), \
