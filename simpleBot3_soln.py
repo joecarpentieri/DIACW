@@ -47,9 +47,13 @@ class Brain():
         if abs(chargerR-chargerL)<chargerL*0.1 and not self.currentlyTurning and (chargerL+chargerR)<250: #approximately the same
             speedLeft = 2.0
             speedRight = 2.0
-        if 200<chargerR<400 and not self.currentlyTurning or 200<chargerL<400 and not self.currentlyTurning:
+        if 200<chargerL<400 and chargerL>chargerR and not self.currentlyTurning:
             speedLeft = 2.0
             speedRight = 0.0
+            print(chargerR)
+        if 200<chargerR<400 and chargerR>chargerL and not self.currentlyTurning:
+            speedLeft = 0.0
+            speedRight = 2.0
             print(chargerR)
         if chargerR+chargerL>1000:
             speedLeft = 2.0
