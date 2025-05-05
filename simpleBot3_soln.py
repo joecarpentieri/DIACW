@@ -66,7 +66,7 @@ class Brain():
             self.currentlyTurning = False
 
         #battery - these are later so they have priority
-        if battery<600:
+        if battery<1000:
             if chargerR>chargerL:
                 speedLeft = 2.0
                 speedRight = -2.0
@@ -79,6 +79,10 @@ class Brain():
                 speedLeft = 5.0
                 speedRight = 5.0
                 print("can sense bot!")
+            if lightR+lightL>300:
+                speedLeft = 5.0
+                speedRight = 0.0
+                print("can sense light!")
         '''if chargerL+chargerR>200 and battery<1000:
             speedLeft = 0.0
             speedRight = 0.0'''
@@ -116,7 +120,7 @@ class Bot():
 
     def thinkAndAct(self, agents, passiveObjects, canvas):
         lightL, lightR = self.senseLight(passiveObjects)
-        chargerL, chargerR = self.senseChargers(agents)
+        chargerL, chargerR = self.senseBots(agents)
         collision = self.collision(agents)
 
         view = self.look(agents)
@@ -185,7 +189,7 @@ class Bot():
         return lightL, lightR
 
     #returns sensors values that detect chargers
-    def senseChargers(self, agents):
+    def senseBots(self, agents):
         chargerL = 0.0
         chargerR = 0.0
         for pp in agents:
@@ -566,7 +570,7 @@ def moveIt(canvas,agents,passiveObjects,count,moves):
 def main():
     window = tk.Tk()
     canvas = initialise(window)
-    agents, passiveObjects, count = createObjects(canvas,noOfBots=2,noOfLights=0,amountOfDirt=300,noOfCats=5)
+    agents, passiveObjects, count = createObjects(canvas,noOfBots=2,noOfLights=1,amountOfDirt=300,noOfCats=5)
     moveIt(canvas,agents,passiveObjects,count,0)
     window.mainloop()
 
