@@ -5,14 +5,24 @@ import numpy as np
 import sys
 
 class Counter:
-    def __init__(self,canvas):
+    def __init__(self):
         self.dirtCollected = 0
-        self.canvas = canvas
-        self.canvas.create_text(70,50,text="Dirt collected: "+str(self.dirtCollected),tags="counter")
+
+    def itemCollected(self,canvas):
+        self.dirtCollected += 1
+        canvas.delete("dirtCount")
+        canvas.create_text(50,50,anchor="w",\
+                           text="Dirt collected: "+str(self.dirtCollected),\
+                           tags="dirtCount")
         
-    def itemCollected(self, canvas):
-        self.dirtCollected +=1
-        self.canvas.itemconfigure("counter",text="Dirt collected: "+str(self.dirtCollected))
+    def getDirtCollected(self):
+        return self.dirtCollected
+    
+class ListOfPositionsInMap:
+    def __init__(self):
+        self.list = []
+
+listOfPositions = ListOfPositionsInMap()
         
 
 class Bot:
@@ -35,31 +45,30 @@ class Bot:
 
     def brain(self,chargerL,chargerR):
         # wandering behaviour
-        if self.currentlyTurning==True:
+        '''if self.currentlyTurning==True:
             self.vl = -2.0
             self.vr = 2.0
             self.turning -= 1
-        else:
-            self.vl = 5.0
-            self.vr = 5.0
-            self.moving -= 1
-        if self.moving==0 and not self.currentlyTurning:
+        else:'''
+        self.vl = 2.0
+        self.vr = 2.0
+        self.moving -= 1
+        '''if self.moving==0 and not self.currentlyTurning:
             self.turning = random.randrange(20,40)
             self.currentlyTurning = True
         if self.turning==0 and self.currentlyTurning:
             self.moving = random.randrange(50,100)
-            self.currentlyTurning = False
+            self.currentlyTurning = False'''
         #battery - these are later so they have priority
-        if self.battery<600:
-            if chargerR>chargerL:
+        '''if chargerR>chargerL:
                 self.vl = 2.0
                 self.vr = -2.0
             elif chargerR<chargerL:
                 self.vl = -2.0
-                self.vr = 2.0
-            if abs(chargerR-chargerL)<chargerL*0.1: #approximately the same
-                self.vl = 5.0
-                self.vr = 5.0
+                self.vr = 2.0'''
+        if abs(chargerR-chargerL)<chargerL*0.1: #approximately the same
+            self.vl = 2.0
+            self.vr = 2.0
             #self.vl = 5*math.sqrt(chargerR)
             #self.vr = 5*math.sqrt(chargerL)
         if chargerL+chargerR>200 and self.battery<1000:
@@ -121,9 +130,6 @@ class Bot:
         if self.battery==0:
             self.vl = 0
             self.vr = 0
-        for rr in registryPassives:
-            if isinstance(rr,Charger) and self.distanceTo(rr)<80:
-                self.battery += 10
                 
         if self.vl==self.vr:
             R = 0
@@ -164,22 +170,28 @@ class Bot:
         xMapPosition = int(math.floor(self.x/100))
         yMapPosition = int(math.floor(self.y/100))
         self.map[xMapPosition][yMapPosition] = 1
-        self.drawMap()
+        #self.drawMap()
+        #print(f"{xMapPosition}, {yMapPosition}")
+        if (xMapPosition, yMapPosition) not in listOfPositions.list:
+            listOfPositions.list.append((xMapPosition, yMapPosition))
+            #print(listOfPositions.list)
+        else:
+            print(listOfPositions.list)
 
     def drawMap(self):
         for xx in range(0,10):
             for yy in range(0,10):
-                print(xx,",",yy,)
+                #print(xx,",",yy,)
                 if self.map[xx][yy]==1:
                     self.canvas.create_rectangle(100*xx,100*yy,100*xx+100,100*yy+100,fill="pink",width=0,tags="map")
         self.canvas.tag_lower("map")
                 
         
-    def senseCharger(self, registryPassives):
+    def senseCharger(self, registryActives):
         lightL = 0.0
         lightR = 0.0
-        for pp in registryPassives:
-            if isinstance(pp,Charger):
+        for pp in registryActives:
+            if isinstance(pp, Bot):
                 lx,ly = pp.getLocation()
                 distanceL = math.sqrt( (lx-self.sensorPositions[0])*(lx-self.sensorPositions[0]) + \
                                        (ly-self.sensorPositions[1])*(ly-self.sensorPositions[1]) )
@@ -204,35 +216,6 @@ class Bot:
         for ii in sorted(toDelete,reverse=True):
             del registryPassives[ii]
         return registryPassives
-
-class Charger:
-    def __init__(self,namep):
-        self.centreX = random.randint(100,900)
-        self.centreY = random.randint(100,900)
-        self.name = namep
-        
-    def draw(self,canvas):
-        body = canvas.create_oval(self.centreX-10,self.centreY-10, \
-                                  self.centreX+10,self.centreY+10, \
-                                  fill="gold",tags=self.name)
-
-    def getLocation(self):
-        return self.centreX, self.centreY
-
-
-class WiFiHub:
-    def __init__(self,namep,xp,yp):
-        self.centreX = xp
-        self.centreY = yp
-        self.name = namep
-        
-    def draw(self,canvas):
-        body = canvas.create_oval(self.centreX-10,self.centreY-10, \
-                                  self.centreX+10,self.centreY+10, \
-                                  fill="purple",tags=self.name)
-
-    def getLocation(self):
-        return self.centreX, self.centreY
 
 
 class Dirt:
@@ -271,20 +254,11 @@ def register(canvas):
         bot = Bot("Bot"+str(i),canvas)
         registryActives.append(bot)
         bot.draw(canvas)
-    charger = Charger("Charger")
-    registryPassives.append(charger)
-    charger.draw(canvas)
-    hub1 = WiFiHub("Hub1",950,50)
-    registryPassives.append(hub1)
-    hub1.draw(canvas)
-    hub2 = WiFiHub("Hub1",50,500)
-    registryPassives.append(hub2)
-    hub2.draw(canvas)
     for i in range(0,noOfDirt):
         dirt = Dirt("Dirt"+str(i))
         registryPassives.append(dirt)
         dirt.draw(canvas)
-    count = Counter(canvas)
+    count = Counter()
     canvas.bind( "<Button-1>", lambda event: buttonClicked(event.x,event.y,registryActives) )
     return registryActives, registryPassives, count
 
@@ -295,9 +269,9 @@ def moveIt(canvas,registryActives,registryPassives,count,moves):
         rr.brain(chargerIntensityL, chargerIntensityR)
         rr.move(canvas,registryPassives,1.0)
         registryPassives = rr.collectDirt(canvas,registryPassives, count)
-        numberOfMoves = 500
+        numberOfMoves = 1000
         if moves>numberOfMoves:
-            print("total dirt collected in",numberOfMoves,"moves is",count.dirtCollected)
+            print("total dirt collected in",numberOfMoves,"moves is",count.dirtCollected, listOfPositions.list)
             sys.exit()
     canvas.after(50,moveIt,canvas,registryActives,registryPassives,count,moves)
 
