@@ -341,7 +341,7 @@ def moveIt(canvas,agents,passiveObjects,count,window):
     canvas.after(20,moveIt,canvas,agents,passiveObjects,count,window)
 
 
-def main(botNo, dirtNo):
+def runMain(botNo, dirtNo):
     window = tk.Tk()
     canvas = initialise(window)
     agents, passiveObjects, count = createObjects(canvas,noOfBots=botNo,noOfLights=0,amountOfDirt=dirtNo,noOfCats=0)
@@ -354,9 +354,10 @@ def main(botNo, dirtNo):
 #main()
 
 
-def runMain(noOfTimes, botNo, dirtNo):
+def runMainMultiple(noOfTimes, botNo, dirtNo):
     counterList = []
     for times in range(noOfTimes):
-        main(botNo, dirtNo)
+        counterList.append(runMain(botNo, dirtNo))
+    return counterList
 
-runMain(2, 1, 300)
+print(runMainMultiple(2, 20, 300))
