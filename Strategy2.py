@@ -3,6 +3,7 @@ import random
 import math
 import numpy as np
 import sys
+import time
 
 class Counter:
     def __init__(self):
@@ -22,8 +23,18 @@ class ListOfPositionsInMap:
     def __init__(self):
         self.list = []
 
+class ListOfPositionsInMapPrior:
+    def __init__(self):
+        self.list = {}
+        self.count = 0
+
+class WaitingForBot:
+    def __init__(self):
+        self.list = {}
+
 listOfPositions = ListOfPositionsInMap()
-        
+listOfPositionsPrior = ListOfPositionsInMapPrior()    
+waitingTime = WaitingForBot()    
 
 class Bot:
 
@@ -42,38 +53,68 @@ class Bot:
         self.currentlyTurning = False
         self.map = np.zeros( (10,10) )
         self.canvas = canvasp
+        self.currentPosition = 0
+        self.countdown = None
+        self.whereCurrent = {}
+        self.whereIveBeen = []
 
     def brain(self,chargerL,chargerR):
         # wandering behaviour
+        #print(type(self.whereCurrent))
         '''if self.currentlyTurning==True:
             self.vl = -2.0
             self.vr = 2.0
             self.turning -= 1
         else:'''
-        self.vl = 2.0
-        self.vr = 2.0
-        self.moving -= 1
+        '''
+        for _ in self.currentPosition:
+            if _ in listOfPositions.list:
+                self.vl = 5.0
+                self.vr = 0.0
+                print("Turning now!")
+            else:
+                self.vl = 5.0
+                self.vr = 5.0
+                self.moving -= 1'''
+        
+        
         '''if self.moving==0 and not self.currentlyTurning:
             self.turning = random.randrange(20,40)
             self.currentlyTurning = True
         if self.turning==0 and self.currentlyTurning:
             self.moving = random.randrange(50,100)
-            self.currentlyTurning = False'''
-        #battery - these are later so they have priority
-        '''if chargerR>chargerL:
-                self.vl = 2.0
-                self.vr = -2.0
-            elif chargerR<chargerL:
-                self.vl = -2.0
-                self.vr = 2.0'''
-        if abs(chargerR-chargerL)<chargerL*0.1: #approximately the same
-            self.vl = 2.0
-            self.vr = 2.0
+            self.currentlyTurning = False
+        
+        if self.currentPosition == []:
+            self.vl = 5.0
+            self.vr = 5.0
+        
+
+        elif abs(chargerR-chargerL)<chargerL*0.1: #approximately the same
+            self.vl = 5.0
+            self.vr = 0.0
             #self.vl = 5*math.sqrt(chargerR)
             #self.vr = 5*math.sqrt(chargerL)
-        if chargerL+chargerR>200 and self.battery<1000:
-            self.vl = 0.0
+        if chargerR+chargerL>80 and chargerR>chargerL:
+            self.vl = 5.0
             self.vr = 0.0
+        #if chargerR+chargerL>8
+        elif chargerL+chargerR>80:
+            self.vl = 5.0
+            self.vr = 0.0
+            print(1)
+        
+        #if chargerR+chargerL>80 and chargerL>chargerR:
+           # self.vl = 0.0
+           # self.vr = 5.0
+           # print(1)
+        
+        elif abs(chargerR-chargerL)<chargerL*0.1 and chargerR+chargerL>80: #approximately the same
+            self.vl = 0.0
+            self.vr = 5.0
+        '''
+        
+        
         
     def draw(self,canvas):
         points = [ (self.x + 30*math.sin(self.theta)) - 30*math.sin((math.pi/2.0)-self.theta), \
@@ -170,13 +211,187 @@ class Bot:
         xMapPosition = int(math.floor(self.x/100))
         yMapPosition = int(math.floor(self.y/100))
         self.map[xMapPosition][yMapPosition] = 1
-        #self.drawMap()
-        #print(f"{xMapPosition}, {yMapPosition}")
-        if (xMapPosition, yMapPosition) not in listOfPositions.list:
+        self.currentPosition = (xMapPosition, yMapPosition)
+        self.drawMap()
+        self.whereIveBeen.append((xMapPosition, yMapPosition))
+       # print(self.whereIveBeen)
+        print(listOfPositions.list)
+
+        if self.whereIveBeen[-1] != self.currentPosition and self.currentPosition in listOfPositions.list:
+            print(type(self.whereCurrent))
+            self.whereCurrent[(xMapPosition, yMapPosition)] = (5)
+            self.vl = 5.0
+            self.vr = 0.0
+            #print(self.whereCurrent[(xMapPosition, yMapPosition)])
+        '''
+        elif self.whereIveBeen[-1] == self.currentPosition and self.currentPosition in listOfPositions.list and self.whereCurrent[(xMapPosition, yMapPosition)] == (5):
+            self.whereCurrent[(xMapPosition, yMapPosition)] = (4)
+            self.vl = 5.0
+            self.vr = 0.0
+        elif self.whereIveBeen[-1] == self.currentPosition and self.currentPosition in listOfPositions.list and self.whereCurrent[(xMapPosition, yMapPosition)] == (4):
+            self.whereCurrent[(xMapPosition, yMapPosition)] = (3)
+            self.vl = 5.0
+            self.vr = 0.0
+        elif self.whereIveBeen[-1] == self.currentPosition and self.currentPosition in listOfPositions.list and self.whereCurrent[(xMapPosition, yMapPosition)] == (3):
+            self.whereCurrent[(xMapPosition, yMapPosition)] = (2)
+            self.vl = 5.0
+            self.vr = 0.0
+        elif self.whereIveBeen[-1] == self.currentPosition and self.currentPosition in listOfPositions.list and self.whereCurrent[(xMapPosition, yMapPosition)] == (2):
+            self.whereCurrent[(xMapPosition, yMapPosition)] = (1)
+            self.vl = 5.0
+            self.vr = 0.0
+            print("hi")
+        elif self.whereIveBeen[-1] == self.currentPosition and self.currentPosition in listOfPositions.list and self.whereCurrent[(xMapPosition, yMapPosition)] == (1):
+            self.whereCurrent[(xMapPosition, yMapPosition)] = (0)
+            self.vl = 5.0
+            self.vr = 0.0
+            print("yay")
+        elif self.whereIveBeen[-1] == self.currentPosition and self.currentPosition in listOfPositions.list and self.whereCurrent[(xMapPosition, yMapPosition)] == 0:
+            self.vl = 5.0
+            self.vr = 5.0
+            print("yay!")
+            
+        #print(f"{xMapPosition}, {yMapPosition}")'''
+        '''if not self.currentPosition:
+            self.vl = 5.0
+            self.vr = 5.0'''
+
+        self.currentPosition = (xMapPosition, yMapPosition)
+        #if a new place
+        if (xMapPosition, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition) not in listOfPositionsPrior.list: 
+            listOfPositionsPrior.list[(xMapPosition, yMapPosition)] = (20)
+            
+        #if time has come for it to go into actual list
+        elif (xMapPosition, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition) in listOfPositionsPrior.list and listOfPositionsPrior.list[(xMapPosition, yMapPosition)] == 0:
             listOfPositions.list.append((xMapPosition, yMapPosition))
-            #print(listOfPositions.list)
-        else:
-            print(listOfPositions.list)
+            listOfPositionsPrior.list.pop((xMapPosition, yMapPosition))
+            
+        #takes off countdown when before 0
+        elif (xMapPosition, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition) in listOfPositionsPrior.list:
+            listOfPositionsPrior.list[(xMapPosition, yMapPosition)] -= 1
+
+        
+
+        
+        
+        
+        
+        
+        
+        #if the surrounding places on the map are all within the list that have been explored
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            
+            #print("all 4")
+        
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("3")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("3")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("3")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition, yMapPosition-1) not in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("3")
+            #print("been there before!")
+        '''
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and not self.countdown:
+            self.countdown=5
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==5:
+            self.countdown=4
+            self.vl = 5.0
+            self.vr = 0.0
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==4:
+            self.countdown=3
+            self.vl = 5.0
+            self.vr = 0.0
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==3:
+            self.countdown=2
+            self.vl = 5.0
+            self.vr = 0.0
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==2:
+            self.countdown=1
+            self.vl = 5.0
+            self.vr = 0.0
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==1:
+            self.countdown=0
+            self.vl = 5.0
+            self.vr = 0.0
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==0:
+            self.vl = 5.0
+            self.vr = 5.0
+            self.countdown=11
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==11:
+            self.vl = 5.0
+            self.vr = 5.0
+            self.countdown=10
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==10:
+            self.vl = 5.0
+            self.vr = 5.0
+            self.countdown=9
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==9:
+            self.vl = 5.0
+            self.vr = 5.0
+            self.countdown=8
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==8:
+            self.vl = 5.0
+            self.vr = 5.0
+            self.countdown=7
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and self.countdown==None:
+            self.vl = 5.0
+            self.vr = 5.0
+            self.countdown=None
+        
+        if (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("2")
+            #print("been there before!")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("2")
+            #print("been there before!")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition, yMapPosition-1) not in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("2")
+            #print("been there before!")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("2")
+            #print("been there before!")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition, yMapPosition-1) not in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("2")
+            #print("been there before!")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition, yMapPosition-1) in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("1")
+            #print("been there before!")
+        elif (xMapPosition, yMapPosition) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition, yMapPosition-1) not in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            #print("1")
+            #print("been there before!")
+        if (xMapPosition, yMapPosition) in listOfPositions.list:
+            self.vl = 10.0
+            self.vr = 10.0'''
+        if (xMapPosition, yMapPosition) not in listOfPositions.list:
+            self.vl = 5.0
+            self.vr = 5.0
+            
 
     def drawMap(self):
         for xx in range(0,10):
@@ -188,17 +403,20 @@ class Bot:
                 
         
     def senseCharger(self, registryActives):
+        xMapPosition = int(math.floor(self.x/100))
+        yMapPosition = int(math.floor(self.y/100))
+        self.map[xMapPosition][yMapPosition] = 1
         lightL = 0.0
         lightR = 0.0
-        for pp in registryActives:
-            if isinstance(pp, Bot):
-                lx,ly = pp.getLocation()
+        if (xMapPosition, yMapPosition) in listOfPositions.list:
+                lx,ly = int(xMapPosition*100), int(yMapPosition*100)
                 distanceL = math.sqrt( (lx-self.sensorPositions[0])*(lx-self.sensorPositions[0]) + \
                                        (ly-self.sensorPositions[1])*(ly-self.sensorPositions[1]) )
                 distanceR = math.sqrt( (lx-self.sensorPositions[2])*(lx-self.sensorPositions[2]) + \
                                        (ly-self.sensorPositions[3])*(ly-self.sensorPositions[3]) )
                 lightL += 200000/(distanceL*distanceL)
                 lightR += 200000/(distanceR*distanceR)
+        #print(lightL+lightR)
         return lightL, lightR
     
     def distanceTo(self,obj):
@@ -271,7 +489,7 @@ def moveIt(canvas,registryActives,registryPassives,count,moves):
         registryPassives = rr.collectDirt(canvas,registryPassives, count)
         numberOfMoves = 1000
         if moves>numberOfMoves:
-            print("total dirt collected in",numberOfMoves,"moves is",count.dirtCollected, listOfPositions.list)
+            print("total dirt collected in",numberOfMoves,"moves is",count.dirtCollected, (listOfPositions.list.sort))
             sys.exit()
     canvas.after(50,moveIt,canvas,registryActives,registryPassives,count,moves)
 
