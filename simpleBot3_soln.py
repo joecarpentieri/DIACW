@@ -6,6 +6,9 @@ import math
 import numpy as np
 import time
 import sys
+import pandas as pd
+from scipy.stats import ttest_ind
+import matplotlib.pyplot as plt
 
 class Brain():
 
@@ -50,11 +53,11 @@ class Brain():
         if 200<chargerL<400 and chargerL>chargerR and not self.currentlyTurning:
             speedLeft = 2.0
             speedRight = 0.0
-            print(chargerR)
+            #print(chargerR)
         if 200<chargerR<400 and chargerR>chargerL and not self.currentlyTurning:
             speedLeft = 0.0
             speedRight = 2.0
-            print(chargerR)
+            #print(chargerR)
         if chargerR+chargerL>1000:
             speedLeft = 2.0
             speedRight = 2.0
@@ -360,4 +363,22 @@ def runMainMultiple(noOfTimes, botNo, dirtNo):
         counterList.append(runMain(botNo, dirtNo))
     return counterList
 
-print(runMainMultiple(2, 20, 300))
+#print(runMainMultiple(2, 20, 300))
+
+#Running with different parameters
+
+def runExperimentsWithDifferentParameters():
+    resultsTable = {}
+    for condition in [1, 2]:
+        dirtCollectedList = runMainMultiple(2,condition, 300)
+        resultsTable[condition] = dirtCollectedList
+    print(resultsTable)
+    results = pd.DataFrame(resultsTable)
+    print(results)
+    results.to_excel("roboticsExperiment.xlsx")
+    print(ttest_ind(results[1],results[2]))
+    print(results.mean(axis=0))
+    results.boxplot(grid=True)
+    plt.show()
+
+print(runExperimentsWithDifferentParameters())
