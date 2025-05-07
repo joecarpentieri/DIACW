@@ -194,7 +194,7 @@ class Bot:
             
             #FROM BELOW + LEFT FREE
                 
-            if self.whereIveBeen[-2] != self.currentPosition and self.whereIveBeen[-2] == (xMapPosition, yMapPosition+1 and self.currentPosition not in self.whereCurrentAndInListOfPositions):
+            if self.whereIveBeen[-2] != self.currentPosition and self.whereIveBeen[-2] == (xMapPosition, yMapPosition+1) and self.currentPosition not in self.whereCurrentAndInListOfPositions:
                 self.whereCurrentAndInListOfPositions.clear()
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
