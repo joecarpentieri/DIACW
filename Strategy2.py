@@ -4,6 +4,9 @@ import math
 import numpy as np
 import sys
 import time
+import pandas as pd
+from scipy.stats import ttest_ind
+import matplotlib.pyplot as plt
 
 class Counter:
     def __init__(self):
@@ -58,11 +61,26 @@ class Bot:
         self.whereCurrentAndInListOfPositions = []
         self.whereIveBeen = []
         self.count = 0
+        self.time = 0
 
     def brain(self,chargerL,chargerR):
         # wandering behaviour
         #print(type(self.whereCurrentAndInListOfPositions))
         pass
+
+    def thinkAndAct(self, count):
+        completed = False
+        if self.time==1000:
+            print("complete: total dirt collected "+str(count))
+            completed = True
+        
+        self.time += 1
+
+        if completed:
+            return count
+        else:
+            return None
+        
         
         
         
@@ -162,7 +180,7 @@ class Bot:
         yMapPosition = int(math.floor(self.y/100))
         self.map[xMapPosition][yMapPosition] = 1
         self.currentPosition = (xMapPosition, yMapPosition)
-        self.drawMap()
+        #self.drawMap()
         self.whereIveBeen.append((xMapPosition, yMapPosition))
         #print(self.whereIveBeen)
         #print(listOfPositions.list)
@@ -2364,16 +2382,16 @@ def initialise(window):
     canvas.pack()
     return canvas
 
-def register(canvas):
+def register(canvas, noOfBots, amountOfDirt):
     registryActives = []
     registryPassives = []
-    noOfBots = 1
-    noOfDirt = 300
+    #noOfBots = 1
+    #noOfDirt = 300
     for i in range(0,noOfBots):
         bot = Bot("Bot"+str(i),canvas)
         registryActives.append(bot)
         bot.draw(canvas)
-    for i in range(0,noOfDirt):
+    for i in range(0,amountOfDirt):
         dirt = Dirt("Dirt"+str(i))
         registryPassives.append(dirt)
         dirt.draw(canvas)
@@ -2381,25 +2399,54 @@ def register(canvas):
     canvas.bind( "<Button-1>", lambda event: buttonClicked(event.x,event.y,registryActives) )
     return registryActives, registryPassives, count
 
-def moveIt(canvas,registryActives,registryPassives,count,moves):
-    moves += 1
+def moveIt(canvas,registryActives,registryPassives,count,moves, window):
+    #moves += 1
     for rr in registryActives:
+        returnedCount = rr.thinkAndAct(count)
+        if returnedCount != None:
+            window.destroy()
+            return returnedCount
         chargerIntensityL, chargerIntensityR = rr.senseCharger(registryPassives)
         rr.brain(chargerIntensityL, chargerIntensityR)
         rr.move(canvas,registryPassives,1.0)
         registryPassives = rr.collectDirt(canvas,registryPassives, count)
         numberOfMoves = 1000
-        if moves>numberOfMoves:
-            print("total dirt collected in",numberOfMoves,"moves is",count.dirtCollected, (listOfPositions.list.sort))
-            sys.exit()
-    canvas.after(50,moveIt,canvas,registryActives,registryPassives,count,moves)
+        #if moves>numberOfMoves:
+            #print("total dirt collected in",numberOfMoves,"moves is",count.dirtCollected, (listOfPositions.list.sort))
+            #sys.exit()
+    canvas.after(50,moveIt,canvas,registryActives,registryPassives,count,moves, window)
 
-def main():
+def runMain(botNo, dirtNo):
     window = tk.Tk()
     canvas = initialise(window)
-    registryActives, registryPassives, count = register(canvas)
+    registryActives, registryPassives, count = register(canvas, noOfBots=botNo, amountOfDirt=dirtNo)
     moves = 0
-    moveIt(canvas,registryActives,registryPassives, count, moves)
+    moveIt(canvas,registryActives,registryPassives, count, moves, window)
     window.mainloop()
+    return count.getDirtCollected()
 
-main()
+#print(runMain(2, 150))
+
+def runMainMultiple(noOfTimes, botNo, dirtNo):
+    counterList = []
+    for times in range(noOfTimes):
+        counterList.append(runMain(botNo, dirtNo))
+    return counterList
+
+#print(runMainMultiple(1, 1, 300))
+
+def runExperimentsWithDifferentParameters():
+    resultsTable = {}
+    for condition in [1, 2, 3]:
+        dirtCollectedList = runMainMultiple(1,condition, 300)
+        resultsTable[condition] = dirtCollectedList
+    print(resultsTable)
+    results = pd.DataFrame(resultsTable)
+    print(results)
+    results.to_excel("roboticsExperiment.xlsx")
+    print(ttest_ind(results[1],results[2]))
+    print(results.mean(axis=0))
+    results.boxplot(grid=True)
+    plt.show()
+
+print(runExperimentsWithDifferentParameters())

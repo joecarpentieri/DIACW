@@ -411,8 +411,7 @@ def runMain(botNo, dirtNo):
     canvas = initialise(window)
     agents, passiveObjects, count = createObjects(canvas,noOfBots=botNo,noOfLights=0,amountOfDirt=dirtNo,noOfCats=0)
     moves = moveIt(canvas,agents,passiveObjects,count,window)
-    #if moves == 100:
-        #window.destroy()
+    
     window.mainloop()
     return count.getDirtCollected()
 
@@ -431,14 +430,14 @@ def runMainMultiple(noOfTimes, botNo, dirtNo):
 
 def runExperimentsWithDifferentParameters():
     resultsTable = {}
-    for condition in [2]:
-        dirtCollectedList = runMainMultiple(10,condition, 300)
+    for condition in [1,2]:
+        dirtCollectedList = runMainMultiple(1,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
     results = pd.DataFrame(resultsTable)
     print(results)
     results.to_excel("roboticsExperiment.xlsx")
-    print(ttest_ind(results[1],results[2]))
+    print(ttest_ind(results[1], results[2]))
     print(results.mean(axis=0))
     results.boxplot(grid=True)
     plt.show()
