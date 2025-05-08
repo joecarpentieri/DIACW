@@ -716,6 +716,9 @@ class Bot:
                 
                 
                 print("from above + right 1")
+                #print(self.currentPosition)
+                #print(self.whereIveBeen[-1])
+               # print(self.whereIveBeen[-2])
                 
                 self.vl = 0.0
                 self.vr = 5.0
@@ -885,6 +888,10 @@ class Bot:
                 self.count -= 1
                 
                 print("from above + right 1")
+                #print(self.currentPosition)
+                #print(self.whereIveBeen[-1])
+                #print(self.whereIveBeen[-2])
+                
                 
                 self.vl = 0.0
                 self.vr = 5.0
