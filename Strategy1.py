@@ -17,6 +17,12 @@ class WhereTheyveBeen():
 
 where = WhereTheyveBeen()
 
+class TurnsFromOppositeSides:
+    def __init__(self):
+        self.list = []
+
+oppositeList = TurnsFromOppositeSides()
+
 class Brain():
 
     def __init__(self,botp):
@@ -30,7 +36,7 @@ class Brain():
         self.currentPosition = 0
 
     # modify this to change the robot's behaviour
-    def thinkAndAct(self, chargerL, chargerR, x, y, sl, sr,\
+    def thinkAndAct(self, botL, botR, x, y, sl, sr,\
                     count, xMapPosition, yMapPosition, whereIveBeen):
         completed = False
         newX = None
@@ -59,35 +65,18 @@ class Brain():
             self.movingCount = random.randrange(50,100)
             self.currentlyTurning = False'''
 
-        if abs(chargerR-chargerL)<chargerL*0.1 and not self.currentlyTurning and (chargerL+chargerR)<250: #approximately the same
+        if abs(botR-botL)<botL*0.1 and not self.currentlyTurning and (botL+botR)<250: #approximately the same
             speedLeft = 2.0
             speedRight = 2.0
-        if 160<chargerL<400 and chargerL>chargerR and not self.currentlyTurning:
+        if 200<botL<400 and botL>botR and not self.currentlyTurning:
             speedLeft = 2.0
             speedRight = 0.0
-            if len(where.listOfWhere) > 2:
-                if where.listOfWhere[-1] == (xMapPosition, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition, yMapPosition):
-                    #print("TURNING!")
-                    pass
-                else:
-                    print("other side!")
-                    print(where.listOfWhere[-1])
-                    print(where.listOfWhere[-2])
-                    print(xMapPosition, yMapPosition)
-                    #print(where.listOfWhere)
-        if 160<chargerR<400 and chargerR>chargerL and not self.currentlyTurning:
+            
+        if 200<botR<400 and botR>botL and not self.currentlyTurning:
             speedLeft = 0.0
             speedRight = 2.0
-            if len(where.listOfWhere) > 2:
-                if where.listOfWhere[-1] == (xMapPosition, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition+1, yMapPosition-2) or where.listOfWhere[-1] == (xMapPosition-1, yMapPosition+2) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition+2, yMapPosition-1) or where.listOfWhere[-1] == (xMapPosition-2, yMapPosition+1) or where.listOfWhere[-1] == (xMapPosition, yMapPosition):
-                    pass
-                else:
-                    print("other side!")
-                    print(where.listOfWhere[-1])
-                    print(where.listOfWhere[-2])
-                    print(xMapPosition, yMapPosition)
-                    #print(where.listOfWhere)
-        if chargerR+chargerL>1000:
+            
+        if botR+botL>1000:
             speedLeft = 2.0
             speedRight = 2.0
 
@@ -151,11 +140,11 @@ class Bot():
         #print(self.currentPosition)
 
     def thinkAndAct(self, agents, passiveObjects, canvas):
-        chargerL, chargerR = self.senseBots(agents)
+        botL, botR = self.senseBots(agents)
 
         #view = self.look(agents)
         self.sl, self.sr, xx, yy, count, completed, self.xMapPosition, self.yMapPosition, self.whereIveBeen = self.brain.thinkAndAct\
-            (chargerL, chargerR, self.x, self.y, \
+            (botL, botR, self.x, self.y, \
              self.sl, self.sr, self.counter.dirtCollected, self.xMapPosition, self.yMapPosition, self.whereIveBeen)
         if xx != None:
             self.x = xx
@@ -169,10 +158,10 @@ class Bot():
     def setBrain(self,brainp):
         self.brain = brainp
 
-    #returns sensors values that detect chargers
+    #values for sensing if a bot is nearby
     def senseBots(self, agents):
-        chargerL = 0.0
-        chargerR = 0.0
+        botL = 0.0
+        botR = 0.0
         for pp in agents:
             if isinstance(pp, Bot):
                 lx,ly = pp.getLocation()
@@ -180,10 +169,10 @@ class Bot():
                                        (ly-self.sensorPositions[1])*(ly-self.sensorPositions[1]) )
                 distanceR = math.sqrt( (lx-self.sensorPositions[2])*(lx-self.sensorPositions[2]) + \
                                        (ly-self.sensorPositions[3])*(ly-self.sensorPositions[3]) )
-                chargerL += 200000/(distanceL*distanceL)
-                chargerR += 200000/(distanceR*distanceR)
-        #print(chargerL, chargerR)
-        return chargerL, chargerR
+                botL += 200000/(distanceL*distanceL)
+                botR += 200000/(distanceR*distanceR)
+        print(botL, botR)
+        return botL, botR
 
     def distanceTo(self,obj):
         xx,yy = obj.getLocation()
@@ -424,22 +413,28 @@ def runMainMultiple(noOfTimes, botNo, dirtNo):
         counterList.append(runMain(botNo, dirtNo))
     return counterList
 
-#print(runMainMultiple(2, 20, 300))
+#print(runMainMultiple(1, 10, 300))
 
 #Running with different parameters
 
 def runExperimentsWithDifferentParameters():
     resultsTable = {}
-    for condition in [1,2]:
+    for condition in [1,2,3]:
         dirtCollectedList = runMainMultiple(1,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
-    results = pd.DataFrame(resultsTable)
-    print(results)
-    results.to_excel("roboticsExperiment.xlsx")
-    print(ttest_ind(results[1], results[2]))
-    print(results.mean(axis=0))
-    results.boxplot(grid=True)
+    results1 = pd.DataFrame(resultsTable)
+    print(results1)
+    results1.to_excel("roboticsExperiment.xlsx")
+    print(ttest_ind(results1[1], results1[2]))
+    print(results1.mean(axis=1))
+    results1.boxplot(grid=True)
     plt.show()
 
 print(runExperimentsWithDifferentParameters())
+    
+
+
+
+#print(ttest_ind(Strategy2.results, results2))
+
