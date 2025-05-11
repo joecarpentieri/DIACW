@@ -610,7 +610,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("done")
+                print("from below + left 49")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1016,7 +1016,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
                 #print(self.whereCurrentAndInListOfPositions)
-                print("done")
+                print("coming from above turning right with only left free - 0")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1439,7 +1439,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
                # print(self.whereCurrentAndInListOfPositions)
-                print("done")
+                print("from below going right 49")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2677,7 +2677,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("done")
+                print("from below + left 49")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3115,7 +3115,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
                 #print(self.whereCurrentAndInListOfPositions)
-                print("done")
+                print("from above going right with left and right free - 0")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3123,7 +3123,7 @@ class Bot:
                 self.vr = 2.0
 
         #ABOVE ONLY FREE
-        elif len(self.whereIveBeen) > 30 and (xMapPosition, yMapPosition-1) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list:
+        elif len(self.whereIveBeen) > 50 and (xMapPosition, yMapPosition-1) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list:
 
             #COMING FROM LEFT + TURNING LEFT
             if self.whereIveBeen[-2] != self.currentPosition and self.whereIveBeen[-2] == (xMapPosition-1, yMapPosition) and self.currentPosition not in self.whereCurrentAndInListOfPositions:
@@ -3527,7 +3527,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("done")
+                print("from left + left 49")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4373,7 +4373,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("done")
+                print("from right + left 49")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4826,7 +4826,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("coming from right + turning left 1 with above + below free")
+                print("coming from left + turning left 1 with above + below free")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -5220,7 +5220,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("done")
+                print("from left + left 49")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -5786,7 +5786,7 @@ def runMain2(botNo, dirtNo):
     window.mainloop()
     return count.getDirtCollected()
 
-#print(runMain(1, 300))
+print(runMain2(1, 300))
 
 def runMainMultiple2(noOfTimes, botNo, dirtNo):
     counterList = []
@@ -5810,4 +5810,4 @@ def runExperimentsWithDifferentParameters2():
     results.boxplot(grid=True)
     plt.show()
 
-print(runExperimentsWithDifferentParameters2())
+#print(runExperimentsWithDifferentParameters2())
