@@ -217,7 +217,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from below + left 1")
+                print("coming from below + turning left 1 with only left free")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -623,7 +623,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from above going right")
+                print("coming from above turning right with only left free")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1040,7 +1040,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from below going right")
+                print("coming from below going right as right is only free")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1453,7 +1453,7 @@ class Bot:
                 self.count = 0
                 
                 
-                print("from above + right 1")
+                print("from above + turning left (right of screen) 1 with right only free")
                 #print(self.currentPosition)
                 #print(self.whereIveBeen[-1])
                # print(self.whereIveBeen[-2])
@@ -1860,7 +1860,7 @@ class Bot:
                 self.vl = 2.0
                 self.vr = 2.0
             
-            elif self.whereIveBeen[-2] != self.currentPosition and self.currentPosition not in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-2] == (xMapPosition, yMapPosition-1):
+            '''elif self.whereIveBeen[-2] != self.currentPosition and self.currentPosition not in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-2] == (xMapPosition, yMapPosition-1):
                 self.whereCurrentAndInListOfPositions.clear()
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -2271,7 +2271,7 @@ class Bot:
                 self.vl = 0.0
                 self.vr = 2.0
                 self.vl = 2.0
-                self.vr = 2.0
+                self.vr = 2.0'''
 
         #ABOVE + BELOW CURRENT POSITION FILLED
         
@@ -2284,7 +2284,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from below + left 1")
+                print("coming from below + turning left 1 with left + right free")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2691,7 +2691,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from above going right")
+                print("from above going right with left and right free")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3131,7 +3131,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from left + left 1")
+                print("coming from left + turning left 1 with above only free")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3541,7 +3541,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from right + right 1")
+                print("coming from right + turning right 1 with above only free")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3979,7 +3979,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from right + left 1")
+                print("coming from right + turning left 1 with below only free")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4387,7 +4387,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from left + right 1")
+                print("coming from left + turning right 1 with below only free")
                 
                 self.vl = 2.0
                 self.vr = 0.0
