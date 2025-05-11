@@ -72,6 +72,10 @@ class Bot:
         completed = False
         if self.time==1000:
             print("complete: total dirt collected "+str(count))
+            listOfPositions.list.clear()
+            listOfPositionsPrior.list.clear()
+            print(listOfPositions.list)
+            print(listOfPositionsPrior.list)
             completed = True
         
         self.time += 1
@@ -185,7 +189,7 @@ class Bot:
         #print(self.whereIveBeen)
         #print(listOfPositions.list)
         #print(self.currentPosition)
-        print(self.currentPosition)
+        #print(self.currentPosition)
 
         #if a new place
         if (xMapPosition, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition) not in listOfPositionsPrior.list: 
@@ -218,6 +222,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from below + turning left 1 with only left free")
+                print(listOfPositions.list)
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2285,6 +2290,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from below + turning left 1 with left + right free")
+                print(listOfPositions.list)
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2692,6 +2698,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("from above going right with left and right free")
+                print(listOfPositions.list)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3132,6 +3139,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from left + turning left 1 with above only free")
+                print(listOfPositions.list)
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3542,6 +3550,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from right + turning right 1 with above only free")
+                print(listOfPositions.list)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3980,6 +3989,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from right + turning left 1 with below only free")
+                print(listOfPositions.list)
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4388,6 +4398,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from left + turning right 1 with below only free")
+                print(listOfPositions.list)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4827,6 +4838,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from left + turning left 1 with above + below free")
+                print(listOfPositions.list)
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -5235,7 +5247,8 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 print("coming from right + turning right 1 with above + below free")
-                
+                print(listOfPositions.list)
+
                 self.vl = 2.0
                 self.vr = 0.0
 
@@ -5666,7 +5679,7 @@ class Bot:
         else:
             self.vl = 2.0
             self.vr = 2.0
-            print("bypassed!")
+            #print("bypassed!")
             
             
         
@@ -5799,7 +5812,7 @@ def runMainMultiple2(noOfTimes, botNo, dirtNo):
 def runExperimentsWithDifferentParameters2():
     resultsTable = {}
     for condition in [1]:
-        dirtCollectedList = runMainMultiple2(1,condition, 300)
+        dirtCollectedList = runMainMultiple2(10,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
     results = pd.DataFrame(resultsTable)
@@ -5810,4 +5823,4 @@ def runExperimentsWithDifferentParameters2():
     results.boxplot(grid=True)
     plt.show()
 
-#print(runExperimentsWithDifferentParameters2())
+print(runExperimentsWithDifferentParameters2())
