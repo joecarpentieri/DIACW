@@ -2273,7 +2273,7 @@ class Bot:
                 self.vl = 2.0
                 self.vr = 2.0'''
 
-        #ABOVE + BELOW CURRENT POSITION FILLED
+        #ABOVE + BELOW CURRENT POSITION FILLED, LEFT AND RIGHT FREE
         
         elif len(self.whereIveBeen) > 50 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list:
 
@@ -4809,6 +4809,853 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
                 print("from left + right 49")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+                self.vl = 2.0
+                self.vr = 2.0
+
+        
+        #ABOVE + BELOW FREE, BUT LEFT AND RIGHT NOT
+
+        elif len(self.whereIveBeen) > 50 and (xMapPosition, yMapPosition-1) not in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list:
+
+            #COMING FROM LEFT, TURN LEFT
+            if self.whereIveBeen[-2] != self.currentPosition and self.whereIveBeen[-2] == (xMapPosition-1, yMapPosition) and self.currentPosition not in self.whereCurrentAndInListOfPositions:
+                self.whereCurrentAndInListOfPositions.clear()
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                #print(self.whereIveBeen[-9])
+                print("coming from right + turning left 1 with above + below free")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+
+            elif self.whereIveBeen[-3] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-3] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                #print(self.whereIveBeen[-9])
+                #print(self.whereIveBeen[-8])
+                #print(17)
+                print("from left + left 2")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+
+            elif self.whereIveBeen[-4] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-4] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 3")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+
+            elif self.whereIveBeen[-5] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-5] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 4")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-6] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-6] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 5")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-7] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-7] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 6")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+
+            elif self.whereIveBeen[-8] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-8] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 7")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+
+            elif self.whereIveBeen[-9] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-9] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 8")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-10] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-10] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 9")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-11] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-11] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 10")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-12] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-12] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 11")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-13] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-13] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 12")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-14] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-14] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 13")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-15] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-15] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 14")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-16] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-16] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 15")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-17] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-17] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 16")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-18] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-18] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 17")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-19] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-19] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 18")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-20] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-20] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 19")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-21] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-21] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 20")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-22] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-22] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 21")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-23] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-23] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 22")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-24] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-24] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 23")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-25] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-25] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 24")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-26] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-26] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 25")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-27] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-27] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 26")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-28] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-28] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 27")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-29] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-29] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 28")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-30] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-30] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 29")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-31] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-31] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 30")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-32] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-32] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 31")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-33] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-33] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 32")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-34] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-34] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 33")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-35] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-35] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 34")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-36] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-36] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 35")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-37] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-37] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 36")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-38] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-38] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 37")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-39] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-39] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 38")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-40] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-40] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 39")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-41] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-41] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 40")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-42] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-42] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 41")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-43] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-43] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 42")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-44] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-44] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 43")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-45] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-45] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 44")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-46] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-46] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 45")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-47] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-47] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 46")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-48] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-48] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 47")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            elif self.whereIveBeen[-49] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-49] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + left 48")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+            
+            elif self.whereIveBeen[-50] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-50] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.whereCurrentAndInListOfPositions.clear()
+                self.count -= 1
+                print("done")
+                
+                self.vl = 0.0
+                self.vr = 2.0
+                self.vl = 2.0
+                self.vr = 2.0
+
+            #COMING FROM RIGHT, TURN RIGHT
+            
+            elif self.whereIveBeen[-2] != self.currentPosition and self.whereIveBeen[-2] == (xMapPosition+1, yMapPosition) and self.currentPosition not in self.whereCurrentAndInListOfPositions:
+                self.whereCurrentAndInListOfPositions.clear()
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                #print(self.whereIveBeen[-9])
+                print("coming from right + turning right 1 with above + below free")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+
+            elif self.whereIveBeen[-3] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-3] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 2")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+
+            elif self.whereIveBeen[-4] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-4] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 3")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+
+            elif self.whereIveBeen[-5] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-5] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 4")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-6] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-6] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 5")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-7] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-7] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 6")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+
+            elif self.whereIveBeen[-8] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-8] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 7")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+
+            elif self.whereIveBeen[-9] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-9] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 8")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-10] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-10] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 9")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-11] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-11] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 10")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-12] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-12] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 11")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-13] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-13] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 12")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-14] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-14] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 13")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-15] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-15] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 14")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-16] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-16] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 15")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-17] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-17] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 16")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-18] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-18] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 17")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-19] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-19] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 18")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-20] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-20] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 19")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-21] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-21] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 20")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-22] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-22] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 21")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-23] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-23] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 22")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-24] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-24] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 23")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-25] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-25] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 24")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-26] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-26] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 25")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-27] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-27] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 26")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-28] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-28] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 27")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-29] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-29] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 28")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+
+            elif self.whereIveBeen[-30] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-30] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 29")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-31] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-31] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 30")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-32] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-32] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 31")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-33] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-33] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 32")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-34] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-34] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 33")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-35] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-35] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 34")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-36] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-36] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 35")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-37] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-37] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 36")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-38] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-38] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 37")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+
+            elif self.whereIveBeen[-39] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-39] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 38")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-40] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-40] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 39")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-41] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-41] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 40")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-42] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-42] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 41")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-43] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-43] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 42")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-44] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-44] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 43")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-45] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-45] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 44")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-46] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-46] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 45")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-47] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-47] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 46")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-48] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-48] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 47")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-49] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-49] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from right + right 48")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            
+            elif self.whereIveBeen[-50] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-50] == (xMapPosition+1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.whereCurrentAndInListOfPositions.clear()
+                self.count -= 1
+                print("from right + right 49")
                 
                 self.vl = 2.0
                 self.vr = 0.0
