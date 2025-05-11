@@ -419,14 +419,14 @@ def runMainMultiple(noOfTimes, botNo, dirtNo):
 
 def runExperimentsWithDifferentParameters():
     resultsTable = {}
-    for condition in [1,2,3]:
-        dirtCollectedList = runMainMultiple(1,condition, 300)
+    for condition in [1]:
+        dirtCollectedList = runMainMultiple(10,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
     results1 = pd.DataFrame(resultsTable)
     print(results1)
     results1.to_excel("roboticsExperiment.xlsx")
-    print(ttest_ind(results1[1], results1[2]))
+    #print(ttest_ind(results1[1], results1[2]))
     print(results1.mean(axis=1))
     results1.boxplot(grid=True)
     plt.show()
@@ -438,3 +438,5 @@ print(runExperimentsWithDifferentParameters())
 
 #print(ttest_ind(Strategy2.results, results2))
 
+
+#print(ttest_ind(58, 53))

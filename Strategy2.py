@@ -208,7 +208,7 @@ class Bot:
         
         
         #RIGHT, BELOW AND ABOVE FILLED IN
-        if len(self.whereIveBeen) > 30 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list:
+        if len(self.whereIveBeen) > 50 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list:
             
             #FROM BELOW + LEFT FREE
                 
@@ -449,7 +449,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 19")
+                print("from below + left 29")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -457,7 +457,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 20")
+                print("from below + left 30")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -465,7 +465,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 21")
+                print("from below + left 31")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -473,7 +473,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 22")
+                print("from below + left 32")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -481,7 +481,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 23")
+                print("from below + left 33")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -489,7 +489,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 24")
+                print("from below + left 34")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -497,7 +497,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 25")
+                print("from below + left 35")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -505,7 +505,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 26")
+                print("from below + left 36")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -513,7 +513,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 27")
+                print("from below + left 37")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -521,7 +521,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 28")
+                print("from below + left 38")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -529,7 +529,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 19")
+                print("from below + left 39")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -537,7 +537,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 20")
+                print("from below + left 40")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -545,7 +545,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 21")
+                print("from below + left 41")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -553,7 +553,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 22")
+                print("from below + left 42")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -561,7 +561,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 23")
+                print("from below + left 43")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -569,7 +569,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 24")
+                print("from below + left 44")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -577,7 +577,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 25")
+                print("from below + left 45")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -585,7 +585,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 26")
+                print("from below + left 46")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -593,7 +593,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 27")
+                print("from below + left 47")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -601,7 +601,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 28")
+                print("from below + left 48")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -634,7 +634,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 #print(self.whereIveBeen[-8])
-                print(27)
+                print(47)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -643,7 +643,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(26)
+                print(46)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -652,7 +652,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(25)
+                print(45)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -660,7 +660,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(24)
+                print(44)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -668,7 +668,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(23)
+                print(43)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -677,7 +677,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(22)
+                print(42)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -686,7 +686,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(21)
+                print(41)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -694,7 +694,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(20)
+                print(40)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -702,7 +702,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(19)
+                print(39)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -710,7 +710,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(18)
+                print(38)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -718,7 +718,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(17)
+                print(37)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -726,7 +726,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(16)
+                print(36)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -734,7 +734,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(15)
+                print(35)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -742,7 +742,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(14)
+                print(34)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -750,7 +750,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(13)
+                print(33)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -758,7 +758,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(12)
+                print(32)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -766,7 +766,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(11)
+                print(31)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -774,7 +774,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(10)
+                print(30)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -782,7 +782,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(9)
+                print(29)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -790,7 +790,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(8)
+                print(28)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -798,7 +798,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(7)
+                print(27)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -806,7 +806,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(6)
+                print(26)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -814,7 +814,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(5)
+                print(25)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -822,7 +822,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(4)
+                print(24)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -830,7 +830,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(3)
+                print(23)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -838,7 +838,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(2)
+                print(22)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -846,7 +846,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(1)
+                print(21)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -854,7 +854,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(10)
+                print(20)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -862,7 +862,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(9)
+                print(19)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -870,7 +870,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(8)
+                print(18)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -878,7 +878,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(7)
+                print(17)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -886,7 +886,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(6)
+                print(16)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -894,7 +894,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(5)
+                print(15)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -902,7 +902,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(4)
+                print(14)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -910,7 +910,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(3)
+                print(13)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -918,7 +918,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(2)
+                print(12)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -926,7 +926,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(1)
+                print(11)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1030,7 +1030,7 @@ class Bot:
         #if the surrounding places on the map are all within the list that have been explored
         
         #LEFT, BELOW AND ABOVE FILLED IN, RIGHT FREE
-        elif len(self.whereIveBeen) > 30 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list:
+        elif len(self.whereIveBeen) > 50 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list:
             
             
             
@@ -1040,7 +1040,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
-                print("from below 2")
+                print("from below going right")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1049,7 +1049,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below 2+1")
+                print("from below going right 2")
                 #print(self.whereIveBeen[-9])
                 #print(self.whereIveBeen[-8])
                 #print(17)
@@ -1061,7 +1061,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below -4")
+                print("from below going right 3")
                 #print(16)
                 
                 self.vl = 2.0
@@ -1071,7 +1071,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below -5")
+                print("from below going right 4")
                 #print(15)
                 
                 self.vl = 2.0
@@ -1080,7 +1080,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below -6")
+                print("from below going right 5")
                 #print(14)
                 
                 self.vl = 2.0
@@ -1089,7 +1089,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below -7")
+                print("from below going right 6")
                 #print(13)
                 
                 self.vl = 2.0
@@ -1099,7 +1099,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below -8")
+                print("from below going right 7")
                 #print(12)
                 
                 self.vl = 2.0
@@ -1109,7 +1109,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(11)
+                print("from below going right 8")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1117,7 +1117,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(10)
+                print("from below going right 9")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1125,7 +1125,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(9)
+                print("from below going right 10")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1133,7 +1133,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(8)
+                print("from below going right 11")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1141,7 +1141,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(7)
+                print("from below going right 12")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1149,7 +1149,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(6)
+                print("from below going right 13")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1157,7 +1157,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-               # print(5)
+                print("from below going right 14")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1165,7 +1165,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-               # print(4)
+                print("from below going right 15")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1173,7 +1173,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-               # print(3)
+                print("from below going right 16")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1181,7 +1181,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-               # print(2)
+                print("from below going right 17")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1189,7 +1189,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 18")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1197,7 +1197,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 19")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1205,7 +1205,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 20")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1213,7 +1213,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 21")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1221,7 +1221,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 22")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1229,7 +1229,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 23")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1237,7 +1237,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 24")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1245,7 +1245,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 25")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1253,7 +1253,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 26")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1261,7 +1261,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 27")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1269,7 +1269,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 28")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1277,7 +1277,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 29")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1285,7 +1285,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 30")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1293,7 +1293,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 31")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1301,7 +1301,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 32")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1309,7 +1309,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 33")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1317,7 +1317,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 34")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1325,7 +1325,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 35")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1333,7 +1333,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 36")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1341,7 +1341,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 37")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1349,7 +1349,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 38")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1357,7 +1357,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 39")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1365,7 +1365,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 40")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1373,7 +1373,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 41")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1381,7 +1381,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 42")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1389,7 +1389,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 43")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1397,7 +1397,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 44")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1405,7 +1405,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 45")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1413,7 +1413,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 46")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1421,7 +1421,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 47")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1429,7 +1429,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                #print(1)
+                print("from below going right 48")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1439,7 +1439,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
                # print(self.whereCurrentAndInListOfPositions)
-               # print("done")
+                print("done")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -1692,7 +1692,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 19")
+                print("from above + right 29")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1700,7 +1700,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 20")
+                print("from above + right 30")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1708,7 +1708,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 21")
+                print("from above + right 31")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1716,7 +1716,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 22")
+                print("from above + right 32")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1724,7 +1724,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 23")
+                print("from above + right 33")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1732,7 +1732,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 24")
+                print("from above + right 34")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1740,7 +1740,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 25")
+                print("from above + right 35")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1748,7 +1748,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 26")
+                print("from above + right 36")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1756,7 +1756,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 27")
+                print("from above + right 37")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1764,7 +1764,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 28")
+                print("from above + right 38")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1772,7 +1772,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 19")
+                print("from above + right 39")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1780,7 +1780,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 20")
+                print("from above + right 40")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1788,7 +1788,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 21")
+                print("from above + right 41")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1796,7 +1796,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 22")
+                print("from above + right 42")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1804,7 +1804,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 23")
+                print("from above + right 43")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1812,7 +1812,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 24")
+                print("from above + right 44")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1820,7 +1820,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 25")
+                print("from above + right 45")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1828,7 +1828,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 26")
+                print("from above + right 46")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1836,7 +1836,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 27")
+                print("from above + right 47")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1844,7 +1844,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 28")
+                print("from above + right 48")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -1853,7 +1853,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("from above + right 29")
+                print("from above + right 49")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2105,7 +2105,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 19")
+                print("from above + right 29")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2113,7 +2113,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 20")
+                print("from above + right 30")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2121,7 +2121,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 21")
+                print("from above + right 31")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2129,7 +2129,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 22")
+                print("from above + right 32")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2137,7 +2137,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 23")
+                print("from above + right 33")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2145,7 +2145,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 24")
+                print("from above + right 34")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2153,7 +2153,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 25")
+                print("from above + right 35")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2161,7 +2161,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 26")
+                print("from above + right 36")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2169,7 +2169,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 27")
+                print("from above + right 37")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2177,7 +2177,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 28")
+                print("from above + right 38")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2185,7 +2185,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 19")
+                print("from above + right 39")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2193,7 +2193,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 20")
+                print("from above + right 40")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2201,7 +2201,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 21")
+                print("from above + right 41")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2209,7 +2209,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 22")
+                print("from above + right 42")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2217,7 +2217,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 23")
+                print("from above + right 43")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2225,7 +2225,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 24")
+                print("from above + right 44")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2233,7 +2233,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 25")
+                print("from above + right 45")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2241,7 +2241,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 26")
+                print("from above + right 46")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2249,7 +2249,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 27")
+                print("from above + right 47")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2257,7 +2257,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from above + right 28")
+                print("from above + right 48")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2266,7 +2266,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("from above + right 29")
+                print("from above + right 49")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2275,7 +2275,7 @@ class Bot:
 
         #ABOVE + BELOW CURRENT POSITION FILLED
         
-        elif len(self.whereIveBeen) > 30 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list:
+        elif len(self.whereIveBeen) > 50 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition-1, yMapPosition) not in listOfPositions.list and (xMapPosition, yMapPosition+1) in listOfPositions.list and (xMapPosition+1, yMapPosition) not in listOfPositions.list:
 
             #TURNING LEFT
 
@@ -2516,7 +2516,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 19")
+                print("from below + left 29")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2524,7 +2524,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 20")
+                print("from below + left 30")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2532,7 +2532,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 21")
+                print("from below + left 31")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2540,7 +2540,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 22")
+                print("from below + left 32")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2548,7 +2548,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 23")
+                print("from below + left 33")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2556,7 +2556,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 24")
+                print("from below + left 34")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2564,7 +2564,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 25")
+                print("from below + left 35")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2572,7 +2572,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 26")
+                print("from below + left 36")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2580,7 +2580,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 27")
+                print("from below + left 37")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2588,7 +2588,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 28")
+                print("from below + left 38")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2596,7 +2596,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 19")
+                print("from below + left 39")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2604,7 +2604,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 20")
+                print("from below + left 40")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2612,7 +2612,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 21")
+                print("from below + left 41")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2620,7 +2620,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 22")
+                print("from below + left 42")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2628,7 +2628,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 23")
+                print("from below + left 43")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2636,7 +2636,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 24")
+                print("from below + left 44")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2644,7 +2644,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 25")
+                print("from below + left 45")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2652,7 +2652,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 26")
+                print("from below + left 46")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2660,7 +2660,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 27")
+                print("from below + left 47")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2668,7 +2668,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from below + left 28")
+                print("from below + left 48")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -2702,7 +2702,7 @@ class Bot:
                 self.count -= 1
                 #print(self.whereIveBeen[-9])
                 #print(self.whereIveBeen[-8])
-                print(27)
+                print(47)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2711,7 +2711,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(26)
+                print(46)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2720,7 +2720,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(25)
+                print(45)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2728,7 +2728,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(24)
+                print(44)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2736,7 +2736,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(23)
+                print(43)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2745,7 +2745,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(22)
+                print(42)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2754,7 +2754,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(21)
+                print(41)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2762,7 +2762,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(20)
+                print(40)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2770,7 +2770,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(19)
+                print(39)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2778,7 +2778,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(18)
+                print(38)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2786,7 +2786,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(17)
+                print(37)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2794,7 +2794,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(16)
+                print(36)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2802,7 +2802,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(15)
+                print(35)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2810,7 +2810,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(14)
+                print(34)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2818,7 +2818,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(13)
+                print(33)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2826,7 +2826,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(12)
+                print(32)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2834,7 +2834,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(111)
+                print(31)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2843,7 +2843,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(10)
+                print(30)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2852,7 +2852,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(9)
+                print(29)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2861,7 +2861,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(8)
+                print(28)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2870,7 +2870,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(7)
+                print(27)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2879,7 +2879,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(6)
+                print(26)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2888,7 +2888,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(5)
+                print(25)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2897,7 +2897,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(4)
+                print(24)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2906,7 +2906,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(3)
+                print(23)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2915,7 +2915,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(2)
+                print(22)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2924,7 +2924,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(1)
+                print(21)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2933,7 +2933,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(10)
+                print(20)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2942,7 +2942,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(9)
+                print(19)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2951,7 +2951,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(8)
+                print(18)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2960,7 +2960,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(7)
+                print(17)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2969,7 +2969,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(6)
+                print(16)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2978,7 +2978,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(5)
+                print(15)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2987,7 +2987,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(4)
+                print(14)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -2996,7 +2996,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(3)
+                print(13)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3005,7 +3005,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(2)
+                print(12)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3014,7 +3014,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print(1)
+                print(11)
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3364,7 +3364,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 19")
+                print("from left + left 29")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3372,7 +3372,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 20")
+                print("from left + left 30")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3380,7 +3380,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 21")
+                print("from left + left 31")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3388,7 +3388,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 22")
+                print("from left + left 32")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3396,7 +3396,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 23")
+                print("from left + left 33")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3404,7 +3404,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 24")
+                print("from left + left 34")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3412,7 +3412,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 25")
+                print("from left + left 35")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3420,7 +3420,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 26")
+                print("from left + left 36")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3428,7 +3428,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 27")
+                print("from left + left 37")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3436,7 +3436,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 28")
+                print("from left + left 38")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3445,7 +3445,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 19")
+                print("from left + left 39")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3453,7 +3453,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 20")
+                print("from left + left 40")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3461,7 +3461,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 21")
+                print("from left + left 41")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3469,7 +3469,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 22")
+                print("from left + left 42")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3477,7 +3477,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 23")
+                print("from left + left 43")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3485,7 +3485,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 24")
+                print("from left + left 44")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3493,7 +3493,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 25")
+                print("from left + left 45")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3501,7 +3501,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 26")
+                print("from left + left 46")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3509,7 +3509,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 27")
+                print("from left + left 47")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3517,7 +3517,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + left 28")
+                print("from left + left 48")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -3781,7 +3781,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 18")
+                print("from right + right 28")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3790,7 +3790,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 19")
+                print("from right + right 29")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3799,7 +3799,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 20")
+                print("from right + right 30")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3808,7 +3808,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 21")
+                print("from right + right 31")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3817,7 +3817,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 22")
+                print("from right + right 32")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3826,7 +3826,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 23")
+                print("from right + right 33")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3835,7 +3835,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 24")
+                print("from right + right 34")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3844,7 +3844,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 25")
+                print("from right + right 35")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3853,7 +3853,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 26")
+                print("from right + right 36")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3862,7 +3862,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 27")
+                print("from right + right 37")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3871,7 +3871,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 18")
+                print("from right + right 38")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3880,7 +3880,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 19")
+                print("from right + right 39")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3889,7 +3889,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 20")
+                print("from right + right 40")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3898,7 +3898,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 21")
+                print("from right + right 41")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3907,7 +3907,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 22")
+                print("from right + right 42")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3916,7 +3916,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 23")
+                print("from right + right 43")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3925,7 +3925,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 24")
+                print("from right + right 44")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3934,7 +3934,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 25")
+                print("from right + right 45")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3943,7 +3943,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 26")
+                print("from right + right 46")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3952,7 +3952,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + right 27")
+                print("from right + right 47")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3962,7 +3962,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("from right + right 28")
+                print("from right + right 48")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -3970,7 +3970,7 @@ class Bot:
                 self.vr = 2.0
                 
         #BELOW ONLY FREE
-        elif len(self.whereIveBeen) > 30 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list:
+        elif len(self.whereIveBeen) > 50 and (xMapPosition, yMapPosition-1) in listOfPositions.list and (xMapPosition, yMapPosition+1) not in listOfPositions.list and (xMapPosition+1, yMapPosition) in listOfPositions.list and (xMapPosition-1, yMapPosition) in listOfPositions.list:
 
             #COMING FROM RIGHT + TURNING LEFT
             
@@ -4211,7 +4211,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 19")
+                print("from right + left 29")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4219,7 +4219,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 20")
+                print("from right + left 30")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4227,7 +4227,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 21")
+                print("from right + left 31")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4235,7 +4235,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 22")
+                print("from right + left 32")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4243,7 +4243,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 23")
+                print("from right + left 33")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4251,7 +4251,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 24")
+                print("from right + left 34")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4259,7 +4259,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 25")
+                print("from right + left 35")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4267,7 +4267,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 26")
+                print("from right + left 36")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4275,7 +4275,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 27")
+                print("from right + left 37")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4283,7 +4283,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 28")
+                print("from right + left 38")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4291,7 +4291,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 19")
+                print("from right + left 39")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4299,7 +4299,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 20")
+                print("from right + left 40")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4307,7 +4307,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 21")
+                print("from right + left 41")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4315,7 +4315,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 22")
+                print("from right + left 42")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4323,7 +4323,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 23")
+                print("from right + left 43")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4331,7 +4331,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 24")
+                print("from right + left 44")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4339,7 +4339,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 25")
+                print("from right + left 45")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4347,7 +4347,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 26")
+                print("from right + left 46")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4355,7 +4355,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 27")
+                print("from right + left 47")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4363,7 +4363,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from right + left 28")
+                print("from right + left 48")
                 
                 self.vl = 0.0
                 self.vr = 2.0
@@ -4414,7 +4414,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 3")
+                print("from left + right 4")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4422,20 +4422,11 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 4")
-                
-                self.vl = 2.0
-                self.vr = 0.0
-            elif self.whereIveBeen[-7] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-7] == (xMapPosition-1, yMapPosition):
-                
-                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
-                self.count -= 1
                 print("from left + right 5")
                 
                 self.vl = 2.0
                 self.vr = 0.0
-
-            elif self.whereIveBeen[-8] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-8] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-7] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-7] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4444,7 +4435,7 @@ class Bot:
                 self.vl = 2.0
                 self.vr = 0.0
 
-            elif self.whereIveBeen[-9] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-9] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-8] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-8] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4452,7 +4443,8 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-10] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-10] == (xMapPosition-1, yMapPosition):
+
+            elif self.whereIveBeen[-9] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-9] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4460,7 +4452,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-11] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-11] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-10] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-10] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4468,7 +4460,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-12] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-12] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-11] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-11] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4476,7 +4468,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-13] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-13] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-12] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-12] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4484,7 +4476,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-14] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-14] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-13] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-13] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4492,7 +4484,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-15] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-15] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-14] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-14] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4500,7 +4492,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-16] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-16] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-15] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-15] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4508,7 +4500,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-17] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-17] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-16] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-16] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4516,7 +4508,7 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-18] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-18] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-17] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-17] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
@@ -4524,11 +4516,19 @@ class Bot:
                 
                 self.vl = 2.0
                 self.vr = 0.0
-            elif self.whereIveBeen[-19] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-19] == (xMapPosition-1, yMapPosition):
+            elif self.whereIveBeen[-18] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-18] == (xMapPosition-1, yMapPosition):
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
                 print("from left + right 17")
+                
+                self.vl = 2.0
+                self.vr = 0.0
+            elif self.whereIveBeen[-19] != self.currentPosition and self.currentPosition in self.whereCurrentAndInListOfPositions and self.whereIveBeen[-19] == (xMapPosition-1, yMapPosition):
+                
+                self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
+                self.count -= 1
+                print("from left + right 18")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4537,7 +4537,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 18")
+                print("from left + right 19")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4546,7 +4546,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 19")
+                print("from left + right 20")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4555,7 +4555,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 20")
+                print("from left + right 21")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4564,7 +4564,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 21")
+                print("from left + right 22")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4573,7 +4573,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 22")
+                print("from left + right 23")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4582,7 +4582,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 23")
+                print("from left + right 24")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4591,7 +4591,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 24")
+                print("from left + right 25")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4600,7 +4600,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 25")
+                print("from left + right 26")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4609,7 +4609,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 26")
+                print("from left + right 27")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4618,7 +4618,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 27")
+                print("from left + right 28")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4627,7 +4627,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 18")
+                print("from left + right 29")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4636,7 +4636,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 19")
+                print("from left + right 30")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4645,7 +4645,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 20")
+                print("from left + right 31")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4654,7 +4654,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 21")
+                print("from left + right 32")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4663,7 +4663,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 22")
+                print("from left + right 33")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4672,7 +4672,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 23")
+                print("from left + right 34")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4681,7 +4681,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 24")
+                print("from left + right 35")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4690,7 +4690,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 25")
+                print("from left + right 36")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4699,7 +4699,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 26")
+                print("from left + right 37")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4708,7 +4708,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 18")
+                print("from left + right 38")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4717,7 +4717,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 19")
+                print("from left + right 39")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4726,7 +4726,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 20")
+                print("from left + right 40")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4735,7 +4735,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 21")
+                print("from left + right 41")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4744,7 +4744,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 22")
+                print("from left + right 42")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4753,7 +4753,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 23")
+                print("from left + right 43")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4762,7 +4762,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 24")
+                print("from left + right 44")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4771,7 +4771,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 25")
+                print("from left + right 45")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4780,7 +4780,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 26")
+                print("from left + right 46")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4789,7 +4789,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 27")
+                print("from left + right 47")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4798,7 +4798,7 @@ class Bot:
                 
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.count -= 1
-                print("from left + right 27")
+                print("from left + right 48")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4808,7 +4808,7 @@ class Bot:
                 self.whereCurrentAndInListOfPositions.append((xMapPosition, yMapPosition))
                 self.whereCurrentAndInListOfPositions.clear()
                 self.count -= 1
-                print("from left + right 28")
+                print("from left + right 49")
                 
                 self.vl = 2.0
                 self.vr = 0.0
@@ -4958,7 +4958,7 @@ def runExperimentsWithDifferentParameters2():
     results = pd.DataFrame(resultsTable)
     print(results)
     results.to_excel("roboticsExperiment.xlsx")
-    print(ttest_ind(results[1],results[2]))
+    #print(ttest_ind(results[1],results[2]))
     print(results.mean(axis=1))
     results.boxplot(grid=True)
     plt.show()
