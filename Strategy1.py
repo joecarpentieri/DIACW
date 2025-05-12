@@ -45,10 +45,10 @@ class Brain():
         #self.drawMap()
 
         #print(self.currentPosition)
-
+        
         speedLeft = 2.0
         speedRight = 2.0
-        
+         
         # wandering behaviour
         '''if self.currentlyTurning==True:
             speedLeft = -2.0
@@ -64,10 +64,11 @@ class Brain():
         if self.turningCount==0 and self.currentlyTurning:
             self.movingCount = random.randrange(50,100)
             self.currentlyTurning = False'''
-
+        '''
         if abs(botR-botL)<botL*0.1 and not self.currentlyTurning and (botL+botR)<250: #approximately the same
             speedLeft = 2.0
             speedRight = 2.0
+        '''
         if 200<botL<400 and botL>botR and not self.currentlyTurning:
             speedLeft = 2.0
             speedRight = 0.0
@@ -419,8 +420,8 @@ def runMainMultiple(noOfTimes, botNo, dirtNo):
 
 def runExperimentsWithDifferentParameters():
     resultsTable = {}
-    for condition in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
-        dirtCollectedList = runMainMultiple(10,condition, 300)
+    for condition in [10]:
+        dirtCollectedList = runMainMultiple(1,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
     results1 = pd.DataFrame(resultsTable)
