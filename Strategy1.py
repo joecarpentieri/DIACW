@@ -172,7 +172,7 @@ class Bot():
                                        (ly-self.sensorPositions[3])*(ly-self.sensorPositions[3]) )
                 botL += 200000/(distanceL*distanceL)
                 botR += 200000/(distanceR*distanceR)
-        print(botL, botR)
+        #print(botL, botR)
         return botL, botR
 
     def distanceTo(self,obj):
@@ -420,8 +420,8 @@ def runMainMultiple(noOfTimes, botNo, dirtNo):
 
 def runExperimentsWithDifferentParameters():
     resultsTable = {}
-    for condition in [10]:
-        dirtCollectedList = runMainMultiple(1,condition, 300)
+    for condition in [1,2,3,4,5,6,7,8,9,10]:
+        dirtCollectedList = runMainMultiple(10,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
     results1 = pd.DataFrame(resultsTable)

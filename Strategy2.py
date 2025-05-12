@@ -5809,12 +5809,12 @@ def runMainMultiple2(noOfTimes, botNo, dirtNo):
 
 #print(runMainMultiple(1, 1, 300))
 
-resultsTable = []
+#resultsTable = []
 
 def runExperimentsWithDifferentParameters2():
     resultsTable = {}
-    for condition in [1]:
-        dirtCollectedList = runMainMultiple2(2,condition, 300)
+    for condition in [1,2,3,4,5,6,7,8,9,10]:
+        dirtCollectedList = runMainMultiple2(10,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
     results = pd.DataFrame(resultsTable)
@@ -5825,8 +5825,8 @@ def runExperimentsWithDifferentParameters2():
     results.boxplot(grid=True)
     plt.show()
 
-#print(runExperimentsWithDifferentParameters2())
+print(runExperimentsWithDifferentParameters2())
 
-print(resultsTable)
+#print(resultsTable)
 
 #print(ttest_ind([19, 37, 44, 36, 43, 39, 35, 33, 43, 47],[30, 34, 41, 37, 37, 42, 30, 44, 28, 18]))
