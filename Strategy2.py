@@ -184,7 +184,7 @@ class Bot:
         yMapPosition = int(math.floor(self.y/100))
         self.map[xMapPosition][yMapPosition] = 1
         self.currentPosition = (xMapPosition, yMapPosition)
-        self.drawMap()
+        #self.drawMap()
         self.whereIveBeen.append((xMapPosition, yMapPosition))
         #print(self.whereIveBeen)
         #print(listOfPositions.list)
@@ -5799,7 +5799,7 @@ def runMain2(botNo, dirtNo):
     window.mainloop()
     return count.getDirtCollected()
 
-print(runMain2(1, 300))
+#print(runMain2(1, 300))
 
 def runMainMultiple2(noOfTimes, botNo, dirtNo):
     counterList = []
@@ -5809,18 +5809,24 @@ def runMainMultiple2(noOfTimes, botNo, dirtNo):
 
 #print(runMainMultiple(1, 1, 300))
 
+resultsTable = []
+
 def runExperimentsWithDifferentParameters2():
     resultsTable = {}
     for condition in [1]:
-        dirtCollectedList = runMainMultiple2(10,condition, 300)
+        dirtCollectedList = runMainMultiple2(2,condition, 300)
         resultsTable[condition] = dirtCollectedList
     print(resultsTable)
     results = pd.DataFrame(resultsTable)
     print(results)
-    results.to_excel("roboticsExperiment.xlsx")
+    results.to_excel("DIACWStrategy2.xlsx")
     #print(ttest_ind(results[1],results[2]))
-    print(results.mean(axis=1))
+    #print(results.mean(axis=1))
     results.boxplot(grid=True)
     plt.show()
 
-print(runExperimentsWithDifferentParameters2())
+#print(runExperimentsWithDifferentParameters2())
+
+print(resultsTable)
+
+#print(ttest_ind([19, 37, 44, 36, 43, 39, 35, 33, 43, 47],[30, 34, 41, 37, 37, 42, 30, 44, 28, 18]))

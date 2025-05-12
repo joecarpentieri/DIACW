@@ -1,0 +1,1 @@
+#run all tests against each other here, and then run the collective against one another - 1vs1, 2vs2 etc. then all strat1 vs allstrat2 by importing from excel
